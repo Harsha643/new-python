@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        1) WAP to convert the decimal to binary.
+        Input: Enter a number: 5
+        Output: 101
+        </p>
+
+        <pre>
+            n = int(input("Enter the number: "))
+res = ""
+while n > 0:
+    res = str(n % 2) + res
+    n = n // 2
+print(res)
+        </pre>
+
+        <img src="./11.jpeg" alt="">
+    <p>2) WAP to print the sum of digits in the given number until a single digit is occured.
+        Input: Enter number: 128
+        Output: 2
+        </p>
+    <pre>
+        num=input("enter the number :")
+sum=0
+double=0
+for i in num:
+    sum=sum+int(i)
+res=str(sum)
+for j in res:
+    double=double+int(j)
+print(double)
+    </pre>
+    <img src="./WhatsApp Image 2025-01-09 at 4.12.47 PM.jpeg" alt="">
+    
+</body>
+</html>
