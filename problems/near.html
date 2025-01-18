@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1) WAP to print the nearest prime number
+        input: Enter a number: 10
+        output: 11
+        input: Enter a number: 20 ( 20 has 2 nearest prime numbers)
+        output: 17 23
+        </p>
+        <pre>
+            num =int(input("enter a number "))
+def isPrime(n):
+    if n>1:
+        for i in range(2,(n//2)+1):
+            if n%i==0:
+                return False
+        return True 
+    return False 
+
+if(isPrime(num)):
+    print("it is prime ")
+else:
+    lp=num-1
+    rp=num+1
+    # print(lp,rp)
+    left,right=True,True
+    while left or right:
+        if( isPrime(lp) and left):
+            x=lp
+            left =False
+        lp-=1
+        if( isPrime(rp) and right):
+            y=rp
+            right=False
+        rp+=1
+    print(x,y)
+        </pre>
+        <img src="Screenshot 2025-01-18 175331.png" alt="">
+
+
+        <p>2) WAP to print the sum of prime digits in the given number
+            input: Enter number: 7288
+            output: 9
+            </p>
+            <pre>
+                num=input("enter the number")
+c=0
+sum=0
+for i in range(0,len(num)):
+    for j in range(2,int(num[i])+1):
+            # print(j,type(j))
+            if(int(num[i])%j== 0):
+                c+=1
+    if(c==1):
+        sum+=int(num[i])
+        c=0
+print(sum)
+            </pre>
+            <img src="./prime.png" alt="">
+</body>
+</html>
